@@ -1,0 +1,3 @@
+#!/bin/sh
+dir=$(dirname "$0") #Get directory of script file
+open -a Terminal $dir/script #run script file in terminal window
