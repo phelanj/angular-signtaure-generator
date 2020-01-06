@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~ngx-toastr/toastr';
+body {
+    font-family: 'Futura PT', 'Helvetica', 'Tahoma', 'Times New Roman', sans-serif;
+    color: #77787b;
+    font-weight: lighter;
+    font-size: 12px;
+}
+p {
+    margin: 0; 
+ }
+ 
+ .title {
+ font-weight: 100;
+ }
+ p.name {
+     color: #EE202E;
+     font-size: 20px;
+     font-weight: bolder !important;
+     text-transform: uppercase;
+ }
+ .contact span {
+     font-weight: bolder;
+     color: black;
+ }
+ 
+ .social img {
+     width: 30px;
+     padding: 3px;
+ }
+ 
+ .image img {
+     width: 30px;
+ }

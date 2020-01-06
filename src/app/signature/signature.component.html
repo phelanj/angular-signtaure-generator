@@ -1,0 +1,6 @@
+<div id="sigDisplay" [innerHTML]="htmlCode"></div>
+    <textarea rows="20" cols="52" id="codeBlock">{{htmlCode}}</textarea><br>
+    <app-toast clipboardType="(For Mac Mail)" (click)="copyText('codeBlock')"></app-toast>
+    <app-toast clipboardType="(For Outlook)" (click)="copyToClipboard('sigDisplay')"></app-toast>
+
+  
