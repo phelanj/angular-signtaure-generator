@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~ngx-toastr/toastr';
 body {
-    font-family: 'Futura PT', 'Helvetica', 'Tahoma', 'Times New Roman', sans-serif;
-    color: #77787b;
+    font-family: 'Lato', 'Futura PT', 'Helvetica', 'Tahoma', 'Times New Roman', sans-serif;
     font-weight: lighter;
     font-size: 12px;
+    //margin: 0;
 }
 p {
     margin: 0; 
@@ -31,4 +31,8 @@ p {
  
  .image img {
      width: 30px;
+ }
+
+ h1, h2, h3 {
+     font-weight: 300;
  }

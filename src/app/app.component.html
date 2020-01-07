@@ -1,20 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <h2>Version {{version}}</h2>
-</div>
-
-<div>
-  <a href="./assets/mailscript.zip" download>Download Mail Script (Mac Mail Only)</a>
-</div>
-
-<div id="inputBlock">
-  <p>Job Position:</p>
-  <input type="text" [(ngModel)]="job">
-  <p>Full Name:</p>
-  <input type="text" [(ngModel)]="name">
-</div>
-<app-signature [job_title]="job" [full_name]="name"></app-signature>
+  <div style="text-align: center;">
+    <h1>Moda Signature Generator</h1>
+    <h2>Version {{version}}</h2>
+  </div>
 <router-outlet></router-outlet>

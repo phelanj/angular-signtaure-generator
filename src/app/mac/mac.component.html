@@ -1,0 +1,9 @@
+  <div id="inputBlock">
+    <a href="./assets/mailscript.zip" download>Download Mail Script (Mac Mail Only)</a>
+    <br><br>
+    <p>Job Position:</p>
+    <input type="text" [(ngModel)]="job"><br>
+    <p>Full Name:</p>
+    <input type="text" [(ngModel)]="name">
+  </div>
+  <app-signature [job_title]="job" [full_name]="name"></app-signature>
