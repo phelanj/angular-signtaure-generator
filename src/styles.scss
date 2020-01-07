@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~ngx-toastr/toastr';
+router-outlet ~ * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
 body {
     font-family: 'Lato', 'Futura PT', 'Helvetica', 'Tahoma', 'Times New Roman', sans-serif;
     font-weight: lighter;

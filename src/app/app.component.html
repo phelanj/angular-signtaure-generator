@@ -1,6 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
+  <div [@openClose]="homePage" id="arrow" style="font-size: 48px;position: absolute; cursor: pointer;">&larr;</div>
   <div style="text-align: center;">
     <h1>Moda Signature Generator</h1>
     <h2>Version {{version}}</h2>
   </div>
-<router-outlet></router-outlet>
+  <p>We are {{homePage ? 'on' : 'not on'}} the homepage</p>
+  <div [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''" >
+    <router-outlet (activate)="routeChange()" #o="outlet"></router-outlet>
+  </div>
