@@ -1,10 +1,12 @@
+import { AppGlobals } from './../../app.global';
 import { Component, OnInit } from '@angular/core';
 import { version } from '../../../package.json';
 
 @Component({
   selector: 'app-mac',
   templateUrl: './mac.component.html',
-  styleUrls: ['./mac.component.scss']
+  styleUrls: ['./mac.component.scss'],
+  providers: [AppGlobals]
 })
 export class MacComponent implements OnInit {
   version: string = version;
@@ -13,7 +15,9 @@ export class MacComponent implements OnInit {
   title = 'Signature Generator';
 
 
-  constructor() { }
+  constructor(private _globals:AppGlobals) { }
+  scriptName = this._globals.scriptName;
+  //scriptFile1:string = this._globals.scriptFile;
 
   ngOnInit() {
   }

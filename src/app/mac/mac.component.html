@@ -1,9 +1,27 @@
-  <div id="inputBlock">
-    <a href="./assets/mailscript.zip" download>Download Mail Script (Mac Mail Only)</a>
-    <br><br>
-    <p>Job Position:</p>
-    <input type="text" [(ngModel)]="job"><br>
-    <p>Full Name:</p>
-    <input type="text" [(ngModel)]="name">
-  </div>
-  <app-signature [job_title]="job" [full_name]="name"></app-signature>
+<div id="macBlock">
+
+<ol class="instr1">
+  <li>Fill out the Web Signature Generator with your job title and full name</li>
+  <p style="font-size: 30px; text-align: center;">&darr;&darr;&darr;&darr;&darr;</p>
+
+
+
+
+    <div id="inputBlock">
+      <br><br>
+      <p>Job Title:</p>
+      <input type="text" [(ngModel)]="job"><br>
+      <p>Full Name:</p>
+      <input type="text" [(ngModel)]="name">
+    </div>
+    <app-signature [job_title]="job" [full_name]="name"></app-signature>
+
+    <li>Open the <strong>{{ scriptName }}</strong> Terminal and press ⌘V</li>
+    <img src="./assets/pasted-terminal.png" alt="">
+    <li>Press <strong>ENTER</strong> in the Terminal window
+      <ul>
+        <li>The terminal should say ""</li>
+      </ul>
+    </li>
+  </ol>
+</div>

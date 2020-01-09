@@ -7,17 +7,14 @@ router-outlet ~ * {
   }
 body {
     font-family: 'Lato', 'Futura PT', 'Helvetica', 'Tahoma', 'Times New Roman', sans-serif;
-    font-weight: lighter;
     font-size: 12px;
-    //margin: 0;
+    margin: 0;
 }
 p {
     margin: 0; 
  }
  
- .title {
- font-weight: 100;
- }
+
  p.name {
      color: #EE202E;
      font-size: 16px;
@@ -41,3 +38,33 @@ p {
  h1, h2, h3 {
      font-weight: 300;
  }
+
+ .flexCol {
+    button,span {font-size: 30px; font-weight: 300;}
+    flex: 1;
+    
+    #apple {
+        padding-right: 5px;
+        vertical-align: -5%;
+        width: 25px;
+    }
+    #pc {
+        width: 44px;
+        vertical-align: -30%;
+    }
+}
+
+.osButton {
+    width: 190px;
+    height: 50px;
+    background: none;
+    box-shadow: 0px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.instr1 { 
+    width: fit-content;
+    margin: auto auto;    
+    img {max-width: 425px;}
+}

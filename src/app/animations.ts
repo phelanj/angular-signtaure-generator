@@ -3,7 +3,8 @@ import { trigger, transition, style, query, animateChild, group, animate, state 
 export const openClose = trigger('openClose', [
     state('true', style({visibility: 'hidden', opacity: '0'})),
     state('false', style({visibility: 'visible', opacity: '1'})),
-    transition('false <=> true', animate(500))
+    transition('false => true', animate(200)),
+    transition('true => false', animate(400))
   ])
 
 

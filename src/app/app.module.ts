@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastComponent } from './toast/toast.component';
 import { HomeComponent } from './home/home.component';
 import { MacComponent } from './mac/mac.component';
+import { MacStepsComponent } from './mac-steps/mac-steps.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { MacComponent } from './mac/mac.component';
     ToastComponent,
     HomeComponent,
     MacComponent,
+    MacStepsComponent,
   ],
   imports: [
     BrowserModule, FormsModule,

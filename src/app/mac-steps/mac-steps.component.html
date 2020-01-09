@@ -1,0 +1,29 @@
+<div class="instr1">
+    <ol>
+        <li>Open Mail App</li>
+        <li>Go to <strong>Preferences</strong>
+         <ul>
+             <li>Mail > Preferences (Or press ⌘,)</li>
+         </ul>
+     </li>
+     <img src="./assets/preferences.png" alt="">
+     <li>Select <strong>Signatures</strong> tab</li>
+     <li>Select <strong>Exchange</strong> tab and hit the '+' sign</li>
+     <img src="./assets/mail-sig.png" alt="">
+     <li>Give the newly created signature a unique title like "New <code> &lt;Your Name&gt;</code> Sig"</li>
+     <li>Quit out of Mail app (Press ⌘Q or Mail > Quit Mail)</li>
+     <li><a href="./assets/mailscript.zip" download> Click here to download {{ scriptName }}</a></li>
+     <li>Open the folder where <strong>{{ scriptName }}</strong> was downloaded (most likely in Downloads folder)</li>
+     <li>Right click the {{scriptFile}}.zip file and selecet <strong>Open With ></strong> Archive Utility
+        <ul>
+            <li>This will reveal a new application called <strong>{{ scriptFile }}</strong></li>
+        </ul>
+    </li>
+     <img src="./assets/archive.png" alt="">
+     <li>Double click <strong>{{ scriptFile }}</strong>, when prompted, select <strong>Open</strong>.</li>
+     <img src="./assets/script-download.png" alt="">
+     <li><strong>{{ scriptName }}</strong> will open in a new Terminal window, follow instructions in that window to continue</li>
+     <img src="./assets/terminal.png" alt="">
+    </ol> 
+    <button routerLink="/mac" class="osButton">Next</button>
+ </div>

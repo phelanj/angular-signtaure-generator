@@ -1,3 +1,4 @@
+import { MacStepsComponent } from './mac-steps/mac-steps.component';
 import { ToastComponent } from './toast/toast.component';
 import { MacComponent } from './mac/mac.component';
 import { HomeComponent } from './home/home.component';
@@ -8,7 +9,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'Mac', component: MacComponent},
+  {path: 'mac-steps', component: MacStepsComponent},
+  {path: 'mac', component: MacComponent},
   {path: 'Toast', component: ToastComponent}
 
 ];

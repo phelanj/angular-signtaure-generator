@@ -1,10 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
-  <div [@openClose]="homePage" id="arrow" style="font-size: 48px;position: absolute; cursor: pointer;">&larr;</div>
+  <div (click)="backButton()" [@openClose]="homePage" id="arrow" style="font-size: 48px;position: absolute; cursor: pointer;">&larr; <span style="font-size: 30px;">BACK</span></div>
   <div style="text-align: center;">
     <h1>Moda Signature Generator</h1>
     <h2>Version {{version}}</h2>
   </div>
-  <p>We are {{homePage ? 'on' : 'not on'}} the homepage</p>
   <div [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''" >
     <router-outlet (activate)="routeChange()" #o="outlet"></router-outlet>
   </div>
