@@ -9,26 +9,54 @@ mailData=$(ls | grep '^V[0-9]\+$' | cut -c2- | sort -n | tail -n1 | sed 's|^|V|'
 cd $mailData/MailData/Signatures
 
 sigFile=$(ls -rt *.mailsignature | tail -n 1) #Get the file name of the most recently modified signature file
+printf "\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 echo " __  __  ____  _____"
 echo '|  \/  |/ __ \|  __ \   /\'
 echo '| \  / | |  | | |  | | /  \'
 echo '| |\/| | |  | | |  | |/ /\ \'
 echo '| |  | | |__| | |__| / ____ \'
 echo '|_|  |_|\____/|_____/_/    \_\'
+echo
+echo 'Mac Mail App Signtaure Script Version 0.0.3'
 
 echo
+
+
+
 #echo "The most recently changed signature file was modified: \033[1m"
 #date -r $sigFile
 #echo '\033[0m'
 #echo "Is this the file you want to change? (y/n)"
-#read input
 result=$(ls -Ol $sigFile | grep -o 'uchg')
-if [ $result == 'uchg' ]; then
-echo "Error Occured: No new signature found"
-echo "Press ENTER to exit this application and go create a new signature in the Mail app"
-read
-exit
-fi;
+
+
+
+# if [  "$result" = 'uchg' ]; then
+# echo "Error Occured: No new signature found"
+# echo "Press ENTER to exit this application and go create a new signature in the Mail app"
+# read
+# exit
+# fi;
+if [[ $(find "$sigFile" -mmin +1000 -print) ]]; then
+  echo "The most recently created signature file is over a day old. Are you sure you want to continue with this file?"
+PS3='Please enter your choice (1 or 2): '
+options=("Yes, Continue" "No, Exit the app")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Yes, Continue")
+            break
+            ;;
+        "No, Exit the app")
+            echo "Goodbye!"
+            sleep 1
+            exit
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
+
+fi
 
 sed -i '' '7,$d' $sigFile #Delete everything past the first 5 or so lines
 echo "Fill out the Web Signature Generator with your job title and full name."
@@ -43,7 +71,7 @@ echo $input >> $sigFile
 
 
 
-#chflags uchg $sigFile #lock the signature file
+chflags uchg $sigFile #lock the signature file
 echo
 echo
 echo "\033[1m"

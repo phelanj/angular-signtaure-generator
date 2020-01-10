@@ -1,0 +1,19 @@
+#!/bin/bash
+# Bash Menu Script Example
+
+PS3='Please enter your choice (1 or 2): '
+options=("Yes, Continue" "No, Exit the app")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Yes, Continue")
+            echo "you chose choice 1"
+            ;;
+        "No, Exit the app")
+            echo "Goodbye!"
+            sleep 1
+            exit
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
