@@ -22,34 +22,33 @@ echo
 #echo '\033[0m'
 #echo "Is this the file you want to change? (y/n)"
 #read input
-
+result=$(ls -Ol $sigFile | grep -o 'uchg')
+if [ $result == 'uchg' ]; then
+echo "Error Occured: No new signature found"
+echo "Press ENTER to exit this application and go create a new signature in the Mail app"
+read
+exit
+fi;
 
 sed -i '' '7,$d' $sigFile #Delete everything past the first 5 or so lines
 echo "Fill out the Web Signature Generator with your job title and full name."
 echo "Paste the html signature code that you copied from the website and press ENTER."
 read -n 3000 input
-
-result=$(ls -Ol $sigFile)
-echo $result
+echo
 
 
-$input >> $sigFile
+echo $input >> $sigFile
 
 
 
 
-if [ ls -Ol $sigFile ]; then
-echo "Error Occured. You may not have created a new signature"
-else
-chflags uchg $sigFile #lock the signature file
+
+#chflags uchg $sigFile #lock the signature file
 echo
 echo
 echo "\033[1m"
 echo "Success!"
 echo "\033[0m"
 echo "Quit out of mail app and reopen to see changes made to signature."
-fi;
 echo "Press ENTER to exit."
 read input
-read input
-
