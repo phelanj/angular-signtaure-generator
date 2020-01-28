@@ -1,6 +1,11 @@
 # SignatureGenerator
 
+The goal of this project is to expedite the process of setting up email signatures for Moda employees.
+
+The signature is stored as a concatenated string in typescript with dynamic variables set by the user to determine name, job title, and address. The signature is displayed on the screen using angular innerHTML binding. 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+
 
 ## Development server
 
